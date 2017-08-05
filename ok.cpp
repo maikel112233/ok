@@ -11,7 +11,7 @@ char daysOfTheWeek[7][12] = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves"
 void setup () {
   lcd.init();
   lcd.backlight();
-  rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+  //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 
 }
 
