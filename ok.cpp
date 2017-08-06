@@ -2,7 +2,8 @@
 #include <Wire.h>
 #include "RTClib.h"
 //#include <Wire.h>
-#include <LiquidCrystal_I2C.h >
+#include <LiquidCrystal_I2C.h>
+//esto es de que se esta haciendo una prueba
 RTC_DS1307 rtc;
 LiquidCrystal_I2C lcd(0x3f,16,2);
 
