@@ -8,7 +8,7 @@ RTC_DS1307 rtc;
 LiquidCrystal_I2C lcd(0x3f,16,2);
 
 char daysOfTheWeek[7][12] = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"};
-
+char texto[10];
 void setup () {
   lcd.init();
   lcd.backlight();
@@ -28,11 +28,8 @@ void loop () {
     lcd.print(daysOfTheWeek[now.dayOfTheWeek()]);
    //lcd.print(") ");
    lcd.setCursor(0,1);
-    lcd.print(now.hour(), DEC);
-    lcd.print(':');
-    lcd.print(now.minute(), DEC);
-    lcd.print(':');
-    lcd.print(now.second(), DEC);
+   sprintf(texto,"%02d:%02d:%02d",now.hour(),now.minute(),now.second());
+   lcd.print(texto);
 
 
 
